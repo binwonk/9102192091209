@@ -210,8 +210,9 @@ end
 if v5config.UNIVERSAL.MISCSTUFF then
 end
 if v5config.UNIVERSAL.GAME then
-    pcall(function()
+    local succ, ara = pcall(function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/binwonk/9102192091209/main/games/" .. tostring(game.PlaceId) .. ".lua"))()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/binwonk/9102192091209/main/games/" .. tostring(game.GameId) .. ".lua"))()
     end)
+    if not succ then return ara end
 end
