@@ -49,8 +49,6 @@ configUI.configSec2 = configUI.configTab:CreateSection({
     Side = "Right"
 })
 
-configUI.
-
 configUI.configSaveLoad = configUI.configTab:CreateSection({
     Name = "Config Options",
     Side = "Right"
