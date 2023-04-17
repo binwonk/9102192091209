@@ -193,3 +193,25 @@ getgenv().v5 = library:CreateWindow({
 		}
 	}
 })
+
+Notify(welcomeMessage)
+
+if v5config.UNIVERSAL.ESP then
+    -- ESP LOADSTRING GOES HERE
+end
+if v5config.UNIVERSAL.MUSICPLAYER then
+    -- MUSIC PLAYER LOADSTRING GOES HERE
+end
+if v5config.UNIVERSAL.AIMBOT then
+    -- AIMBOT LOADSTRTING
+end
+if v5config.UNIVERSAL.CHATSPAM then
+end
+if v5config.UNIVERSAL.MISCSTUFF then
+end
+if v5config.UNIVERSAL.GAME then
+    pcall(function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/binwonk/9102192091209/main/games/" .. tostring(game.PlaceId) .. ".lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/binwonk/9102192091209/main/games/" .. tostring(game.GameId) .. ".lua"))()
+    end)
+end
