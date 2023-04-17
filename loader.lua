@@ -65,7 +65,7 @@ configUI.configSaveButton = configUI.configSaveLoad:AddButton({
 configUI.configLoadButton = configUI.configSaveLoad:AddButton({
     Name = "Load Config",
     Callback = function()
-        getgenv().v5config = game:GetService("HttpService"):JSONDecode(readfile("binsploitV5.txt"))
+        v5config = game:GetService("HttpService"):JSONDecode(readfile("binsploitV5.txt"))
     end
 })
 
@@ -85,7 +85,7 @@ configUI.configEspToggle = configUI.configSec1:AddToggle({
     Name = "ESP",
     Value = false,
     Callback = function(val)
-        getgenv().v5config.Universal.ESP = val
+        v5config.Universal.ESP = val
     end
 })
 
@@ -93,6 +93,14 @@ configUI.configMUSICPLAYERToggle = configUI.configSec1:AddToggle({
     Name = "Music Player",
     Value = false,
     Callback = function(val)
-        getgenv().v5config.Universal.MUSICPLAYER = val
+        v5config.Universal.MUSICPLAYER = val
+    end
+})
+
+configUI.configGameToggle = configUI.configSec1:AddToggle({
+    Name = "Supported Game Features",
+    Value = false,
+    Callback = function(val)
+        v5config.Universal.GAME = val
     end
 })
