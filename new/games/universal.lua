@@ -1,5 +1,5 @@
 local game = game
-local qot = syn.queue_on_teleport or queue_on_teleport
+local qot = syn.queue_on_teleport or queue_on_teleport or fluxus.queue_on_teleport
 
 
 local universal = v5:CreateTab({
