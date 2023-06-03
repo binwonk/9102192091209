@@ -1,5 +1,5 @@
 local game = game
-local qot = syn.queue_on_teleport or queue_on_teleport or fluxus.queue_on_teleport
+local qot = syn.queue_on_teleport or queue_on_teleport or fluxus.queue_on_teleport or nil
 
 
 local universal = v5:CreateTab({
@@ -27,7 +27,7 @@ local JoinDiscordButton = MiscUniversalSection:AddButton({
 })
 
 local qrejoin = false
-if qot then
+if qot ~= nil then
 game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
 	if State == Enum.TeleportState.Started then
 		if qrejoin then
