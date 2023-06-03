@@ -27,7 +27,9 @@ getgenv().v5 = library:CreateWindow({
 	}
 })
 
+pcall(function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/binwonk/9102192091209/new/games/universal"))()
+end)
 
 pcall(function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/binwonk/9102192091209/new/games/" .. game.GameId .. game.PlaceId))()
